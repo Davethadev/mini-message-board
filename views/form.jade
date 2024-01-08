@@ -1,0 +1,13 @@
+extends layout 
+
+block content
+    h1= title
+
+    form(action="/new" method="POST")
+        div(class='input-wrapper')
+            label(for='author_name') Author Name:
+            input#author_name(type='text', placeholder='Enter your name' name='author_name' required value=(author_name) )
+        div(class='input-wrapper')
+            label(for='message_text') Message Text:
+            input#message_text(type='text', placeholder='Enter your message' name='message_text' required value=(message_text) )
+        button(type='submit') Submit
